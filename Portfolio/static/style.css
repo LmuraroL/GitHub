@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+html,
+body {
+    font-family: Ubunto, Arial;
+    width: 100%;
+    height: 100%;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #535459;
+    overflow-y: auto;
+    width: 300px;
+    transition: all ease-in-out 0.5s;
+    padding: 0 15px;
+}
+
+#header .profile img {
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    border: 8px solid #2F396A;
+    border-radius: 50%;
+}
+
+#header .profile h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    text-align: center;
+    color: #F5DF4D;
+}
+
+#header .profile .social-links a {
+    font-size: 1rem;
+    background: #2F396A;
+    color: white;
+    padding: 0.6rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    transition: 0.3s;
+    text-decoration: none;
+
+}
+
+#header .profile .social-links a:hover {
+    background: #F5DF4D;
+}
+
+.nav-menu {
+    padding: 1.5rem;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+    display: flex;
+    align-items: center;
+    color: #E7E7E7;
+    transition: 00.3s;
+    font-size: 15px;
+}
+
+.nav-menu a:hover {
+    color: #F5DF4D;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i {
+    font-size: 24px;
+    padding-right: 0.8rem;
+    color: #E7E7E7;
+}
+
+.nav-menu a i:hover {
+    color: #F5DF4D;
+}
+
+#main {
+    margin-left: 300px;
+}
+
+section#inicio {
+    background-image: url(https://images.unsplash.com/photo-1629904853893-b770c90a5810?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+section#inicio h2 {
+    font-size: 3rem;
+}
+
+section#inicio span#subtitle {
+    margin-right: 8rem;
+    font-size: 1.5rem;
+}
+
+.text-shadow {
+    text-shadow: 4px 4px 10px #000000;
+}
+
+section#inicio div#arraste {
+    width: 9rem;
+    color: #ffffff;
+}
+
+section#inicio div#arraste a {
+    text-decoration: none;
+    color: #ffffff;
+}
