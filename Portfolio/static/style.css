@@ -7,6 +7,23 @@ body {
     height: 100%;
 }
 
+i.menu-mobile {
+    position: fixed;
+    color: #FFFFFFFF;
+    background-color: #E7D6A2;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    z-index: 10px;
+    width: 45px;
+    height: 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
 #header {
     position: fixed;
     top: 0;
@@ -24,6 +41,14 @@ body {
     display: block;
     width: 120px;
     border: 8px solid #2F396A;
+    border-radius: 50%;
+}
+
+#header .profile img:hover {
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    border: 8px solid transparent;
     border-radius: 50%;
 }
 
@@ -115,4 +140,36 @@ section#inicio div#arraste {
 section#inicio div#arraste a {
     text-decoration: none;
     color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    #header {
+        left: -300px;
+    }
+
+    i.menu-mobile {
+        display: flex;
+    }
+
+    section#inicio h2 {
+        font-size: 3.5rem;
+    }
+
+    section#inicio span#subtitle {
+        margin-right: 0;
+        font-size: 1rem;
+    }
+
+    #main {
+        margin-left: 0;
+    }
+
+    .menu-nav-active {
+        overflow: hidden;
+    }
+
+    .menu-nav-active #header {
+        left: 0;
+
+    }
 }
