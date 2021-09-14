@@ -173,3 +173,17 @@ section#inicio div#arraste a {
 
     }
 }
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    width: 12px;
+    box-shadow: inset 0 0 .3rem #00000050;
+    background-color: #F5DF4D;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #535459;
+}
