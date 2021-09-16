@@ -187,3 +187,103 @@ section#inicio div#arraste a {
 *::-webkit-scrollbar-thumb {
     background-color: #535459;
 }
+
+.section-bg {
+    background-color: #a2a4aa;
+}
+
+.cv .cv-title {
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #050d18;
+}
+
+.cv .cv-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #535459;
+    position: relative;
+}
+
+.cv .cv-item h4 {
+    line-height: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #050d18;
+    margin-bottom: 10px;
+}
+
+.cv .cv-item h5 {
+    background: #e4edf9;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cv .cv-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #535459;
+    background: #fff;
+    border-radius: 50%;
+}
+
+/* Animação */
+
+[data-anime] {
+    opacity: 0;
+    transition: 1s;
+}
+
+[data-anime="down"] {
+    transform: translate3d(0, -100%, 0);
+}
+
+[data-anime="up"] {
+    transform: translate3d(0, 100%, 0);
+}
+
+[data-anime="left"] {
+    transform: translate3d(-100%, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 1860px) {
+    .carousel-control-prev {
+        margin-left: 0;
+    }
+
+    .carousel-control-next {
+        margin-right: 0;
+    }
+
+    [data-anime="right"] {
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+#btn-enviar-loader {
+    display: none;
+}
+
+#alerta {
+    position: fixed;
+    z-index: 10;
+    top: 30px;
+    right: 30px;
+}
