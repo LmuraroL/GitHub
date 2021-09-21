@@ -1,15 +1,11 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, request, flash
+from flask_mail import Mail, Message
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 app = Flask(__name__)
-
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
+app.secret_key = 'thicode'
 
 mail_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
