@@ -16,12 +16,13 @@ mail_settings = {
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": email,
-    "MAIL_PASSWORD": senha
+    "MAIL_USERNAME": os.getenv("EMAIL"),
+    "MAIL_PASSWORD": os.getenv("SENHA")
 }
 
 app.config.update(mail_settings)
 mail = Mail(app)
+
 
 class Contato:
     def __init__(self, nome, email, mensagem):
@@ -29,9 +30,11 @@ class Contato:
         self.email = email
         self.mensagem = mensagem
 
+
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/send', methods=['GET', 'POST'])
 def send():
@@ -43,10 +46,11 @@ def send():
         )
 
         msg = Message(
-            subject = f'{formContato.nome} te enviou uma mensagem no portfólio',
-            sender = app.config.get("MAIL_USERNAME"),
-            recipients= ['docencia.thiago@gmail.com', app.config.get("MAIL_USERNAME")],
-            body = f'''
+            subject=f'{formContato.nome} te enviou uma mensagem no portfólio',
+            sender=app.config.get("MAIL_USERNAME"),
+            recipients=['docencia.thiago@gmail.com',
+                        app.config.get("MAIL_USERNAME")],
+            body=f'''
             
             {formContato.nome} com o e-mail {formContato.email}, te enviou a seguinte mensagem:
             {formContato.mensagem}
@@ -55,6 +59,7 @@ def send():
         mail.send(msg)
         flash('Mensagem enviada com sucesso!')
     return redirect('/')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

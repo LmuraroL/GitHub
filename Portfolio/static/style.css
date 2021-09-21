@@ -7,23 +7,6 @@ body {
     height: 100%;
 }
 
-i.menu-mobile {
-    position: fixed;
-    color: #FFFFFFFF;
-    background-color: #E7D6A2;
-    right: 1rem;
-    top: 1rem;
-    font-size: 1.5rem;
-    border-radius: 4rem;
-    cursor: pointer;
-    z-index: 10px;
-    width: 45px;
-    height: 45px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
 #header {
     position: fixed;
     top: 0;
@@ -34,6 +17,7 @@ i.menu-mobile {
     width: 300px;
     transition: all ease-in-out 0.5s;
     padding: 0 15px;
+    z-index: 9997;
 }
 
 #header .profile img {
@@ -75,6 +59,23 @@ i.menu-mobile {
 
 #header .profile .social-links a:hover {
     background: #F5DF4D;
+}
+
+i.menu-mobile {
+    position: fixed;
+    color: #FFFFFFFF;
+    background-color: #E7D6A2;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    z-index: 10px;
+    width: 45px;
+    height: 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-menu {
@@ -286,4 +287,24 @@ section#inicio div#arraste a {
     z-index: 10;
     top: 30px;
     right: 30px;
+}
+
+#footer {
+    padding: 16px;
+    position: fixed;
+    color: #ffffff;
+    font-size: 14px;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 9999;
+    background-color: #535459;
+}
+
+@media (max-width 1012px) {
+    #footer {
+        position: static;
+        width: auto;
+        padding: 20px 15px;
+    }
 }

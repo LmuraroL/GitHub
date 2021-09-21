@@ -4,23 +4,25 @@ const menuMobile = document.querySelector(".menu-mobile");
 const body = document.querySelector("body");
 
 menuMobile.addEventListener("click", () => {
-    menuMobile.classList.contains("bi-list-nested")
-        ? menuMobile.classList.replace("bi-list-nested", "bi-x")
-        : menuMobile.classList.replace("bi-x", "bi-list-nested");
+    menuMobile.classList.contains("bi-list")
+        ? menuMobile.classList.replace("bi-list", "bi-x")
+        : menuMobile.classList.replace("bi-x", "bi-list");
     body.classList.toggle("menu-nav-active");
 });
-/* FECHA O MENU QUANDO CLICA NA LIST*/
 
-const navItem = document.querySelectorAll('.nav-item')
-navItem.forEach(Item => {
-    Item.addEventListener("click", () => {
+/* Fecha o menu quando clicar em algum item e muda o icone para list */
+
+const navItem = document.querySelectorAll(".nav-item");
+
+navItem.forEach((item) => {
+    item.addEventListener("click", () => {
         if (body.classList.contains("menu-nav-active")) {
-            body.classList.remove("menu-nav-active")
-            menuMobile.classList.replace("bi-x", "bi-list-nested");
+            body.classList.remove("menu-nav-active");
+            menuMobile.classList.replace("bi-x", "bi-list");
         }
-    })
-
+    });
 });
+
 // Animar todos os itens na tela que tiverem meu atributo data-anime
 
 const item = document.querySelectorAll("[data-anime]");
