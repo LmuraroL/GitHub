@@ -308,3 +308,7 @@ section#inicio div#arraste a {
         padding: 20px 15px;
     }
 }
+
+div .progress-bar {
+    background-color: #F5DF4D;
+}
