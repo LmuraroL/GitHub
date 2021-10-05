@@ -312,3 +312,7 @@ section#inicio div#arraste a {
 div .progress-bar {
     background-color: #F5DF4D;
 }
+
+div #agradecimento {
+    text-align: center;
+}
