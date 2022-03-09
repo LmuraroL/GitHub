@@ -350,8 +350,8 @@
 </body>
 <script>
 
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
+    {% with (messages) = get_flashed_messages() %}
+    {% if (messages) %}
     {% for message in messages %}
     <div id="alerta" class="alert alert-success alert-dismissible fade show" role="alert">
         <i class="bi bi-check-circle-fill"></i> {{ message }}
