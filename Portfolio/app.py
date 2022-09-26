@@ -5,7 +5,7 @@ import os
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = 'lcmule'
+app.secret_key = 'destativado'
 
 mail_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
@@ -44,7 +44,7 @@ def send():
         msg = Message(
             subject=f'{formContato.nome} te enviou uma mensagem no portfólio',
             sender=app.config.get("MAIL_USERNAME"),
-            recipients=['lauroleme@gmail.com',
+            recipients=['docencia.thiago@gmail.com',
                         app.config.get("MAIL_USERNAME")],
             body=f'''
             
@@ -54,7 +54,6 @@ def send():
         )
         mail.send(msg)
         flash('Mensagem enviada com sucesso!')
-
     return redirect('/')
 
 
